@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 7
+  playerNumber: 1
 --- !u!1001 &6659421969751975124
 PrefabInstance:
   m_ObjectHideFlags: 0

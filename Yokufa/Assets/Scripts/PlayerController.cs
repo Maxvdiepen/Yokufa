@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float movementSpeed;
 
+    [SerializeField]
+    private string playerNumber;
+
     void Update()
     {
         HandleMovementInput();
@@ -16,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
     void HandleMovementInput ()
     {
-        float _horizontal = Input.GetAxis("Horizontal");
-        float _vertical = Input.GetAxis("Vertical");
+        float _horizontal = Input.GetAxis("Horizontal_P" + playerNumber);
+        float _vertical = Input.GetAxis("Vertical_P" + playerNumber);
 
         Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
         transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
@@ -36,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleSpellInput ()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1_P" + playerNumber))
         {
             PlayerHand.Instance.Shoot();
         }
