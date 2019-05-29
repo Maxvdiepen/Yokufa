@@ -28,12 +28,24 @@ public class PlayerController : MonoBehaviour
 
     void HandleRotationInput ()
     {
-        RaycastHit _hit;
-        Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Mouse control
 
-        if (Physics.Raycast(_ray, out _hit))
+        //RaycastHit _hit;
+        //Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        //if (Physics.Raycast(_ray, out _hit))
+        //{
+        //    transform.LookAt(new Vector3(_hit.point.x, transform.position.y, _hit.point.z));
+        //}
+
+        //Joystick control
+        float _aimHorizontal = Input.GetAxis("AimHorizontal_P" + playerNumber);
+        float _aimVertical = Input.GetAxis("AimVertical_P" + playerNumber);
+
+        if (_aimHorizontal > 0.1f || _aimHorizontal < -0.1f || _aimVertical > 0.1f || _aimVertical < -0.1f)
         {
-            transform.LookAt(new Vector3(_hit.point.x, transform.position.y, _hit.point.z));
+            float heading = Mathf.Atan2(_aimHorizontal, _aimVertical);
+            transform.rotation = Quaternion.Euler(0f, heading * Mathf.Rad2Deg, 0f);
         }
     }
 

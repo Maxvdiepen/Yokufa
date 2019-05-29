@@ -23,6 +23,7 @@ public class PlayerHand : MonoBehaviour
     {
         if(lastTimeShot + cooldown <= Time.time)
         {
+            Debug.Log("yeet");
             Spell _spell = SpellPool.Instance.Instantiate(spellSpawnPoint.position, spellSpawnPoint.rotation);
             _spell.Move();
             lastTimeShot = Time.time;
