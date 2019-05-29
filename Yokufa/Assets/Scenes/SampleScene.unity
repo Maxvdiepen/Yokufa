@@ -504,6 +504,12 @@ PrefabInstance:
       propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellPrefab
+      value: 
+      objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}
 --- !u!1 &1420308255 stripped
@@ -618,5 +624,11 @@ PrefabInstance:
       propertyPath: cooldown
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellPrefab
+      value: 
+      objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}

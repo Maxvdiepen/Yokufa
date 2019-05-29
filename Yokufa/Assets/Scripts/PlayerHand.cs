@@ -6,7 +6,10 @@ public class PlayerHand : MonoBehaviour
 {
     [SerializeField]
     private Transform spellSpawnPoint;
-    
+
+    [SerializeField]
+    GameObject spellPrefab;
+
     [SerializeField]
     private float cooldown;
 
@@ -23,9 +26,7 @@ public class PlayerHand : MonoBehaviour
     {
         if(lastTimeShot + cooldown <= Time.time)
         {
-            Debug.Log("yeet");
-            Spell _spell = SpellPool.Instance.Instantiate(spellSpawnPoint.position, spellSpawnPoint.rotation);
-            _spell.Move();
+            Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
             lastTimeShot = Time.time;
         }
     }

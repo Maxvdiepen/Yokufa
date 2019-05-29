@@ -10,10 +10,8 @@ public class Spell : MonoBehaviour
     private float spellSpeed;
 
     [SerializeField]
-    private float maxSpellDistance;
-
-    private bool shouldMove = false;
-
+    private float maxSpellDistance = 10;
+    
     void Start()
     {
         spellSpawnPoint = transform.position;
@@ -21,23 +19,16 @@ public class Spell : MonoBehaviour
 
     void Update()
     {
-        if(shouldMove)
-        {
-            MoveSpell();
-        }
+        MoveSpell();
+       
     }
 
-    public void Move()
-    {
-        shouldMove = true;  
-    }
 
     void MoveSpell()
     {
         if (Vector3.Distance(spellSpawnPoint, transform.position ) > maxSpellDistance)
         {
-            SpellPool.Instance.ReturnToPool(this);
-            shouldMove = false;
+            Destroy(this.gameObject);
         }
 
         else
