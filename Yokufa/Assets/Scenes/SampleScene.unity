@@ -386,6 +386,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
+--- !u!4 &1121638014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7840237887019319388, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 6659421969751975124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1135421477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7840237887019319388, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1420308254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1180357099
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +522,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
         type: 3}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}
 --- !u!1 &1420308255 stripped
@@ -532,6 +559,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 7
   playerNumber: 2
+  spellSpawnPoint: {fileID: 1135421477}
+  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+    type: 3}
+  cooldown: 2
 --- !u!1 &2569245144986188292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2569245144986188292, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
@@ -552,6 +583,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 7
   playerNumber: 1
+  spellSpawnPoint: {fileID: 1121638014}
+  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+    type: 3}
+  cooldown: 2
 --- !u!1001 &6659421969751975124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -630,5 +665,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
         type: 3}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}

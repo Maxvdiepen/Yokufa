@@ -10,6 +10,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private string playerNumber;
 
+    [SerializeField]
+    private Transform spellSpawnPoint;
+
+    [SerializeField]
+    GameObject spellPrefab;
+
+    [SerializeField]
+    private float cooldown;
+
     void Update()
     {
         HandleMovementInput();
@@ -53,7 +62,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Fire1_P" + playerNumber))
         {
-            PlayerHand.Instance.Shoot();
+            Shoot();
+        }
+    }
+
+
+
+
+    private float lastTimeShot = 0;
+
+    public void Shoot()
+    {
+        if (lastTimeShot + cooldown <= Time.time)
+        {
+            Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
+            lastTimeShot = Time.time;
         }
     }
 }
