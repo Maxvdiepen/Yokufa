@@ -537,56 +537,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 1135421477}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}
---- !u!1 &1420308255 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2569245144986188292, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-    type: 3}
-  m_PrefabInstance: {fileID: 1420308254}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1420308256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420308255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 332ca8da3ad024243ae3f91fa21c681d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 7
-  playerNumber: 2
-  spellSpawnPoint: {fileID: 1135421477}
-  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
-    type: 3}
-  cooldown: 2
---- !u!1 &2569245144986188292 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2569245144986188292, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-    type: 3}
-  m_PrefabInstance: {fileID: 6659421969751975124}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2569245144986188293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2569245144986188292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 332ca8da3ad024243ae3f91fa21c681d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 7
-  playerNumber: 1
-  spellSpawnPoint: {fileID: 1121638014}
-  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
-    type: 3}
-  cooldown: 2
 --- !u!1001 &6659421969751975124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,5 +637,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 1121638014}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellPrefab
+      value: 
+      objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}

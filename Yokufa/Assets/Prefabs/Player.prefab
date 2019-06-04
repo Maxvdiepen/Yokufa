@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7232987622917861689}
   - component: {fileID: 1146021848296199863}
   - component: {fileID: 8455042308151191172}
+  - component: {fileID: 8918733849785639515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -94,6 +95,24 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8918733849785639515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569245144986188292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332ca8da3ad024243ae3f91fa21c681d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 7
+  playerNumber: 2
+  spellSpawnPoint: {fileID: 0}
+  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+    type: 3}
+  cooldown: 2
 --- !u!1 &4292218783653984076
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,10 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9cf98155c563d4b88b43ab413a3fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellSpawnPoint: {fileID: 0}
-  spellPrefab: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
-    type: 3}
-  cooldown: 0
 --- !u!1 &9088480578675709429
 GameObject:
   m_ObjectHideFlags: 0

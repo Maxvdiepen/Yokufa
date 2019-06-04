@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New SwordData", menuName = "Sword Data", order = 51)]
+[CreateAssetMenu(fileName = "New PlayerData", menuName = "Player Data", order = 51)]
 public class PlayerData : ScriptableObject
 {
     [SerializeField]
