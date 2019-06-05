@@ -55,15 +55,17 @@ public class SpeedTestProjectile : MonoBehaviour
         Renderer rend = col.transform.GetComponent<Renderer>();
         Material materialOriginal = rend.material;
         rend.material = hitMaterial;
-        StartCoroutine(Hit(rend, materialOriginal));
+        StartCoroutine(Hit(rend, materialOriginal, col));
     }
 
-    IEnumerator Hit(Renderer renderer, Material og)
+    IEnumerator Hit(Renderer renderer, Material og, Collider target)
     {
         //Debug.Log("hit");
         yield return new WaitForSeconds(.2f);
         renderer.material = og;
         //Debug.Log("default");
         Destroy(this.gameObject);
+        Destroy(target.gameObject);
+        Time.timeScale = 0;
     }
 }
