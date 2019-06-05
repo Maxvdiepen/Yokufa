@@ -17,6 +17,8 @@ public class SpeedTestProjectile : MonoBehaviour
 
     private Renderer rend;
 
+    public Material hitMaterial;
+
     void Awake()
     {
         projectileSpawnPoint = transform.position;
@@ -50,18 +52,18 @@ public class SpeedTestProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        Destroy(this.gameObject);
-        player = GameObject.Find("Player");
-        Renderer rend = player.GetComponent<Renderer>();
-        rend.material.SetColor("_Color", Color.red);
-        StartCoroutine(Hit());
+        Renderer rend = col.transform.GetComponent<Renderer>();
+        Material materialOriginal = rend.material;
+        rend.material = hitMaterial;
+        StartCoroutine(Hit(rend, materialOriginal));
     }
 
-    IEnumerator Hit()
+    IEnumerator Hit(Renderer renderer, Material og)
     {
-        //Debug.Log("Red");
+        //Debug.Log("hit");
         yield return new WaitForSeconds(.2f);
-        rend.material.SetColor("_Color", Color.black);
-        Debug.Log("Black");
+        renderer.material = og;
+        //Debug.Log("default");
+        Destroy(this.gameObject);
     }
 }

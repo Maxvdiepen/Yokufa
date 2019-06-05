@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 7
   maxProjectileDistance: 20
+  hitMaterial: {fileID: 2100000, guid: 21d93afd8192e624e8866c407a0982f3, type: 2}
 --- !u!54 &1999572096156982231
 Rigidbody:
   m_ObjectHideFlags: 0
