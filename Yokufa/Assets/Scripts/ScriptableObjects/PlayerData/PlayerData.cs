@@ -14,6 +14,18 @@ public class PlayerData : ScriptableObject
     [SerializeField]
     private string playerNumber;
 
+    [SerializeField]
+    private SpellData spell1;
+
+    [SerializeField]
+    private SpellData spell2;
+
+    [SerializeField]
+    private SpellData spell3;
+
+    [SerializeField]
+    private SpellData spell4;
+
     public int Health
     {
         get { return health; }
@@ -27,5 +39,25 @@ public class PlayerData : ScriptableObject
     public string PlayerNumber
     {
         get { return playerNumber; }
+    }
+
+    public SpellData Spell1
+    {
+        get { return spell1; }
+    }
+
+    public SpellData Spell2
+    {
+        get { return spell2; }
+    }
+
+    public SpellData Spell3
+    {
+        get { return spell3; }
+    }
+
+    public SpellData Spell4
+    {
+        get { return spell4; }
     }
 }

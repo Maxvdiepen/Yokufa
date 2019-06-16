@@ -15,3 +15,7 @@ MonoBehaviour:
   health: 100
   movementSpeed: 7
   playerNumber: 2
+  spell1: {fileID: 11400000, guid: 4ccc36363332e4c45a4524545eaa1a4d, type: 2}
+  spell2: {fileID: 11400000, guid: 7efacb5df250cbc418a6edda54c2cbf9, type: 2}
+  spell3: {fileID: 11400000, guid: ab352e53445a1ba43b70e755f6973655, type: 2}
+  spell4: {fileID: 11400000, guid: e5129ce2d16532842b193ed12891210e, type: 2}
