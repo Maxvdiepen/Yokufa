@@ -511,6 +511,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 1135421477}
     - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
         type: 3}
       propertyPath: cooldown
@@ -537,11 +542,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: spellSpawnPoint
-      value: 
-      objectReference: {fileID: 1135421477}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}
 --- !u!1001 &6659421969751975124
@@ -611,32 +611,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: cooldown
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: spellPrefab
-      value: 
-      objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
-        type: 3}
-    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: spellSpawnPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8918733849785639515, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
         type: 3}
       propertyPath: movementSpeed
@@ -663,5 +637,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
         type: 3}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellPrefab
+      value: 
+      objectReference: {fileID: 3764596801713945458, guid: 917a9216bd635084183d83b60afceeea,
+        type: 3}
+    - target: {fileID: 1464606249182512030, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: spellSpawnPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725816816153704773, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc1a36eeb3b3df49b90fa21f4b16a45, type: 3}
