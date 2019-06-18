@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int health;
+
     [SerializeField]
     private float movementSpeed;
 
@@ -19,7 +21,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float cooldown;
 
-    
+    private int projectileSpeed;
+
+    private int timesShot;
+
+    private void Start()
+    {
+        projectileSpeed = 19;
+    }
 
     void Update()
     {
@@ -28,11 +37,21 @@ public class PlayerController : MonoBehaviour
         HandleSpellInput();
     }
 
+    void UpCounter()
+    {
+        if(projectileSpeed > 31)
+        {
+            Time.timeScale = 0;
+        }
+        projectileSpeed ++;
+    }
+
     void HandleMovementInput ()
     {
         float _horizontal = Input.GetAxis("Horizontal_P" + playerNumber);
         float _vertical = Input.GetAxis("Vertical_P" + playerNumber);
 
+        //Debug.Log(_horizontal + " " + _vertical);
         Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
         transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
     }
@@ -65,6 +84,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Fire1_P" + playerNumber))
         {
             Shoot();
+            timesShot++;
+            if(timesShot % 4 == 0)
+            {
+                UpCounter();
+            }
+            //Debug.Log("Shoot");
         }
     }
 
