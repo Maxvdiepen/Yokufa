@@ -15,6 +15,7 @@ public class Spell : MonoBehaviour
     [SerializeField]
     private int damage = 10;
 
+
     public Material hitMaterial;
 
     void Start()
@@ -33,6 +34,7 @@ public class Spell : MonoBehaviour
     {
         if (Vector3.Distance(spellSpawnPoint, transform.position ) > maxSpellDistance)
         {
+            //Debug.Log(spellSpeed);
             Destroy(this.gameObject);
         }
 
@@ -51,7 +53,7 @@ public class Spell : MonoBehaviour
         StartCoroutine(Hit(rend, materialOriginal, col));
         PlayerController target = col.transform.GetComponent<PlayerController>();
         target.health -= damage;
-        Debug.Log(target.health);
+        Debug.Log(target.playerNumber + " got hit at " + spellSpeed);
     }
 
     IEnumerator Hit(Renderer renderer, Material og, Collider target)

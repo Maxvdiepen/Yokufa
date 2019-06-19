@@ -12,6 +12,9 @@ public class PlayerData : ScriptableObject
     private int movementSpeed;
 
     [SerializeField]
+    private int projectileSpeed;
+
+    [SerializeField]
     private string playerNumber;
 
     public int Health
@@ -22,6 +25,11 @@ public class PlayerData : ScriptableObject
     public int MovementSpeed
     {
         get { return movementSpeed; }
+    }
+
+    public int ProjectileSpeed
+    {
+        get { return projectileSpeed; } set { projectileSpeed = value; }
     }
 
     public string PlayerNumber

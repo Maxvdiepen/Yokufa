@@ -1,16 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerData playerData;
+
     public int health;
 
     [SerializeField]
     private float movementSpeed;
 
     [SerializeField]
-    private string playerNumber;
+    public string playerNumber;
 
     [SerializeField]
     private Transform spellSpawnPoint;
@@ -25,9 +27,21 @@ public class PlayerController : MonoBehaviour
 
     private int timesShot;
 
+
+    //for test purposes
+    private int ammo;
+     
+    public Text counter;
+
+    public Text reloaded;
+
     private void Start()
     {
-        projectileSpeed = 19;
+        playerData.ProjectileSpeed = 19;
+        ammo = 4;
+        counter.text = "Ammo: 4  Speed: " + playerData.ProjectileSpeed;
+        reloaded.color = Color.green;
+        reloaded.text = "Reloaded";
     }
 
     void Update()
@@ -35,15 +49,28 @@ public class PlayerController : MonoBehaviour
         HandleMovementInput();
         HandleRotationInput();
         HandleSpellInput();
+        HandleUI();
+    }
+
+    void HandleUI ()
+    {
+        counter.text = "Ammo: " + ammo + "  Speed: " + playerData.ProjectileSpeed;
+        if (lastTimeShot + cooldown <= Time.time)
+        {
+            reloaded.color = Color.green;
+            reloaded.text = "Reloaded";
+        }
     }
 
     void UpCounter()
     {
-        if(projectileSpeed > 31)
+        if(playerData.ProjectileSpeed > 31)
         {
             Time.timeScale = 0;
         }
-        projectileSpeed ++;
+        playerData.ProjectileSpeed ++;
+        ammo = 4;
+        //Debug.Log(playerData.ProjectileSpeed);
     }
 
     void HandleMovementInput ()
@@ -51,9 +78,12 @@ public class PlayerController : MonoBehaviour
         float _horizontal = Input.GetAxis("Horizontal_P" + playerNumber);
         float _vertical = Input.GetAxis("Vertical_P" + playerNumber);
 
-        //Debug.Log(_horizontal + " " + _vertical);
-        Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
-        transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
+        if (_horizontal > 0.1f || _horizontal < -0.1f || _vertical > 0.1f || _vertical < -0.1f)
+        {
+            //Debug.Log("Player" + playerNumber + " " + _horizontal + " " + _vertical);
+            Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
+            transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
+        }
     }
 
     void HandleRotationInput ()
@@ -84,11 +114,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Fire1_P" + playerNumber))
         {
             Shoot();
-            timesShot++;
-            if(timesShot % 4 == 0)
-            {
-                UpCounter();
-            }
             //Debug.Log("Shoot");
         }
     }
@@ -102,8 +127,17 @@ public class PlayerController : MonoBehaviour
     {
         if (lastTimeShot + cooldown <= Time.time)
         {
-            Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
+            GameObject spellToBeFired = GameObject.Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
+            spellToBeFired.GetComponent<Spell>().spellSpeed = playerData.ProjectileSpeed;
             lastTimeShot = Time.time;
+            timesShot++;
+            ammo--;
+            reloaded.color = Color.red;
+            reloaded.text = "Reloading";
+            if (timesShot % 4 == 0)
+            {
+                UpCounter();
+            }
         }
     }
 }
